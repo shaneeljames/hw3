@@ -4,10 +4,14 @@
 #include <stdio.h>
 int main(int argc, char **argv)
 {
-    int *data;
+    int *data,*say;
 
     data = (int*) mm_malloc(4);
+    
+    say = (int*) mm_malloc(4);
     data[0] = 1;
+    say[1]=1;
+    mm_free(data);
     mm_free(data);
     printf("malloc sanity test successful!\n");
     return 0;
